@@ -1,0 +1,48 @@
+La interfaz api no requiere convertirse a clase ni enum porque ninguna clase ni objeto la referencia , solo es recibida por parametro.NO SE MAPEA
+La interfaz CriterioSeleccionProveedor tampoco lo requiere ya que tampoco es referenciada.
+
+La interfaz TipoUsuario no requiere convertirse a clase ni enum por mas que haya una referencia con su tipo en la clase Usuario , simplemente
+ignoramos la referencia con un @Transient porque la interfaz y todas las clases que la implementan son "vacias".
+Algo parecido pasa con la interfaz Categoria , pero como una clase que la implementa , Empresa , no es "vacia" , pero es solo una , decidimos agregar
+una referncia a ella e ignorar la de su interfaz , dado que la referencia de la interfaz , de no ser null , solo seria a una instancia de Empresa.
+Para que no se pierda la relacion entre la empresa y la EntidadJuridica , para que quede reflejada en la base de datos. 
+Si bien la relacion tecnicamente es de "tiene" semanticamente es de "es".
+
+No persistimos clases "vacias"(sin atributos ni comportamiento)) ni interfaces "vacias"(sin metodos). 
+No persistimos excepciones ni test.
+
+Nos parecio conveniente que las clases qeu no tiene  sentido instanciar mas de una vez (las stateless , como mercado libre , etc) tengan el nombre de
+su tabla en singular y las clases que tiene sentido instanciar varias veces en plural.
+Salvo en la tabla dinero porque quedaba mal.
+
+Interfaces vacias: APIs/Api , entidades/Categoria y usuarios/TipoUsuario.
+=================
+
+Clases vacias: entidades/Osc , usuarios/Administrador y usuarios/Estandar .
+=============
+
+Multiplicidades de relaciones que valen la pena aclarar:
+=======================================================
+
+En la relacion entre la clase Pais y Provincia , asumimos que no pueden haber dos provincias que apunten a un mismo pais.
+Si bien hay provincias de igual nombre en distintos paises (cordoba en argentina y en españa) , el resto de los datos de la
+provincia nunca coincidiran (las pronvincias son mas que su nombre , como estan modeladas). 
+Eso ultimo resuelve que la relacion de provincia y ciudad no sea de muchos a muchos en el caso de que existiran dos procvincias de igual nombre (en
+distintos paises) que tengan ciudades de igual nombre. 
+
+Ningun enum sera persistido, ya que los mismos pueden seleccionarse desde la debida clase constante
+
+Los items tendran 2 FK nullables, siendo una a un egreso, y la otra a un presupesto
+
+Las clases de EgresosBuilder, CrearEgresos y criptografia no se persistiran porque son clases utiles, pero que solo
+ aportan comportamiento y no tienen atributos reales.
+
+ La clase ReportesGastosMensualesEntidad no se persistira, ya que al interpretarse el reporte como un grupo de datos
+ a mostrarse por pantalla, no deberia porque persistirse el mismo, ya que al consultarse nuevamente por un reporte
+ con la misma parametria el aplicativo generara el mismo resultado "por pantalla"
+
+ La eleccion de la estrategia mapeo de herencia para las entidades fue de "JOINED",  ya que deberiamos identificar la
+ diferencia de ambas tablas para soportar la cardinalidad multiple que se da entre la EntidadJuridica y la EntidadBase
+ , y table per class no podriamos ya que deberiamos tener una sola clase padre para asignar el id de la entidad unico a
+ los usuarios/organizacion.
+ Ademas no vamos a necesitar de consultas polimorficas a la Entidad.
