@@ -1,0 +1,20 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Entidades de la organizacion , de la categoria elegida</li>
+    </ol>
+
+    <ul>
+        {{#entidades}}
+            <li> Nombre: <i>{{nombreFicticio }}</i></li>
+        {{/entidades}}
+    </ul>
+
+     {{#if sinEntidades}}
+        <label style="color:red">No hay entidades para la categoria que selecciono!</label>
+     {{/if}}
+
+{{/partial}}
+{{>layout.html.hbs}}

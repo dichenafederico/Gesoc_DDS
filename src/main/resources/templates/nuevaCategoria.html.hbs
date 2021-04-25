@@ -1,0 +1,43 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Administrar categorias</li>
+    </ol>
+    <h2>Categorias de la organizacion</h2>
+
+    <ul>
+        {{#categorias}}
+            <li> Nombre: <i><a href="/categorias/{{nombre }}"> {{nombre }} </a></i></li>
+        {{/categorias}}
+    </ul>
+
+    <h2>Crear categoria</h2>
+
+    <form action='/nuevaCategoria' method='post'>
+
+        <div>
+            <label>Nombre</label>
+            <input class="form-control" type="text" name="nombre" required="true"/>
+        </div>
+        <div>
+            <label>Elejir un comando</label>
+            <select class="form-control" name="comando">
+
+                {{#descripciones}}
+                    <option> {{descripcion}} </option>
+                {{/descripciones}}
+
+            </select>
+
+        </div>
+
+        <br><br>
+
+        <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="post" value="Crear"></input>
+        <br>
+    </form>
+
+{{/partial}}
+{{>layout.html.hbs}}

@@ -1,0 +1,130 @@
+2020-12-05T02:05:02.528640+00:00 app[web.1]: at java.nio.file.Paths.get(Paths.java:143)
+2020-12-05T02:05:02.528773+00:00 app[web.1]: at security.Validaciones.loadFile(Validaciones.java:63)
+2020-12-05T02:05:02.528909+00:00 app[web.1]: at security.Validaciones$2.realizarValidacion(Validaciones.java:26)
+2020-12-05T02:05:02.529043+00:00 app[web.1]: at domain.usuarios.Usuario.lambda$realizarValidaciones$0(Usuario.java:103)
+2020-12-05T02:05:02.529178+00:00 app[web.1]: at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+2020-12-05T02:05:02.529303+00:00 app[web.1]: at domain.usuarios.Usuario.realizarValidaciones(Usuario.java:103)
+2020-12-05T02:05:02.529435+00:00 app[web.1]: at domain.usuarios.Usuario.setContrasenia(Usuario.java:88)
+2020-12-05T02:05:02.529556+00:00 app[web.1]: at domain.usuarios.Usuario.<init>(Usuario.java:44)
+2020-12-05T02:05:02.529675+00:00 app[web.1]: at server.Bootstrap.init(Bootstrap.java:43)
+2020-12-05T02:05:02.529906+00:00 app[web.1]: at server.Bootstrap.main(Bootstrap.java:21)
+2020-12-05T02:05:02.530053+00:00 app[web.1]: at Main.main(Main.java:10)
+2020-12-05T02:05:03.382524+00:00 heroku[web.1]: State changed from starting to up
+2020-12-05T02:33:10.196373+00:00 heroku[router]: at=info method=GET path="/entidadBase" host=gesoc-dds-dichena.herokuapp.com request_id=267fc7d5-666b-4172-9d6f-ca14b6c59320 fwd="181.47.188.71" dyno=web.1 connect=0ms service=47ms status=302 bytes=290 protocol=https
+2020-12-05T02:33:10.986367+00:00 heroku[router]: at=info method=GET path="/login" host=gesoc-dds-dichena.herokuapp.com request_id=81a230f2-38aa-4b15-94b3-949254883804 fwd="181.47.188.71" dyno=web.1 connect=0ms service=289ms status=200 bytes=1281 protocol=https
+2020-12-05T02:33:11.653732+00:00 heroku[router]: at=info method=GET path="/main.css" host=gesoc-dds-dichena.herokuapp.com request_id=eb1bfa14-6705-4d7d-8514-6d3a8c974dbc fwd="181.47.188.71" dyno=web.1 connect=1ms service=16ms status=200 bytes=428 protocol=https
+2020-12-05T02:33:18.849582+00:00 heroku[router]: at=info method=GET path="/nuevaCategoria" host=gesoc-dds-dichena.herokuapp.com request_id=523ff105-5da5-43d1-9668-5d31abac40d1 fwd="181.47.188.71" dyno=web.1 connect=1ms service=5ms status=302 bytes=166 protocol=https
+2020-12-05T02:33:19.488154+00:00 heroku[router]: at=info method=GET path="/login" host=gesoc-dds-dichena.herokuapp.com request_id=52ab9f25-a6c7-49b4-a611-95743ffbc917 fwd="181.47.188.71" dyno=web.1 connect=3ms service=7ms status=200 bytes=1281 protocol=https
+2020-12-05T02:33:20.142297+00:00 heroku[router]: at=info method=GET path="/main.css" host=gesoc-dds-dichena.herokuapp.com request_id=8e43c83c-48ca-435b-8d2a-5420bb51e43c fwd="181.47.188.71" dyno=web.1 connect=1ms service=4ms status=200 bytes=428 protocol=https
+2020-12-05T03:07:18.847684+00:00 heroku[web.1]: Idling
+2020-12-05T03:07:18.850054+00:00 heroku[web.1]: State changed from up to down
+2020-12-05T03:07:19.763228+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-12-05T03:07:20.171383+00:00 heroku[web.1]: Process exited with status 143
+2020-12-05T18:11:39.000000+00:00 app[api]: Build started by user dichena.federico@gmail.com
+2020-12-05T18:11:54.158204+00:00 app[api]: Deploy 1.0-SNAPSHOT by user dichena.federico@gmail.com
+2020-12-05T18:11:54.158204+00:00 app[api]: Release v31 created by user dichena.federico@gmail.com
+2020-12-05T18:11:54.471767+00:00 heroku[web.1]: State changed from down to starting
+2020-12-05T18:11:58.000000+00:00 app[api]: Build succeeded
+2020-12-05T18:11:58.133282+00:00 heroku[web.1]: Starting process with command `java -jar ./target/GeSoc-1.0-SNAPSHOT-jar-with-dependencies.jar`
+2020-12-05T18:11:59.907674+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2020-12-05T18:11:59.911165+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
+2020-12-05T18:11:59.988820+00:00 app[web.1]: El puerto asignado es: 10438
+2020-12-05T18:12:00.006255+00:00 app[web.1]: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2020-12-05T18:12:00.006359+00:00 app[web.1]: SLF4J: Defaulting to no-operation (NOP) logger implementation
+2020-12-05T18:12:00.006420+00:00 app[web.1]: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2020-12-05T18:12:00.069289+00:00 app[web.1]: Iniciando servidor
+2020-12-05T18:12:00.270092+00:00 app[web.1]: Exception in thread "main" domain.excepciones.ExceptionFileNotFound: No se encontro el archivo
+2020-12-05T18:12:00.270103+00:00 app[web.1]: at security.Validaciones$2.realizarValidacion(Validaciones.java:38)
+2020-12-05T18:12:00.270104+00:00 app[web.1]: at domain.usuarios.Usuario.lambda$realizarValidaciones$0(Usuario.java:103)
+2020-12-05T18:12:00.270105+00:00 app[web.1]: at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+2020-12-05T18:12:00.270105+00:00 app[web.1]: at domain.usuarios.Usuario.realizarValidaciones(Usuario.java:103)
+2020-12-05T18:12:00.283117+00:00 app[web.1]: at domain.usuarios.Usuario.setContrasenia(Usuario.java:88)
+2020-12-05T18:12:00.283119+00:00 app[web.1]: at domain.usuarios.Usuario.<init>(Usuario.java:44)
+2020-12-05T18:12:00.283122+00:00 app[web.1]: at server.Bootstrap.init(Bootstrap.java:43)
+2020-12-05T18:12:00.284125+00:00 app[web.1]: at server.Bootstrap.main(Bootstrap.java:21)
+2020-12-05T18:12:00.284631+00:00 app[web.1]: at Main.main(Main.java:10)
+2020-12-05T18:12:00.794652+00:00 heroku[web.1]: State changed from starting to up
+2020-12-05T18:16:04.000000+00:00 app[api]: Build started by user dichena.federico@gmail.com
+2020-12-05T18:16:18.877652+00:00 app[api]: Deploy 1.0-SNAPSHOT by user dichena.federico@gmail.com
+2020-12-05T18:16:18.877652+00:00 app[api]: Release v32 created by user dichena.federico@gmail.com
+2020-12-05T18:16:19.111708+00:00 heroku[web.1]: Restarting
+2020-12-05T18:16:19.113563+00:00 heroku[web.1]: State changed from up to starting
+2020-12-05T18:16:19.852276+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-12-05T18:16:20.256034+00:00 heroku[web.1]: Process exited with status 143
+2020-12-05T18:16:23.000000+00:00 app[api]: Build succeeded
+2020-12-05T18:16:23.035025+00:00 heroku[web.1]: Starting process with command `java -jar ./target/GeSoc-1.0-SNAPSHOT-jar-with-dependencies.jar`
+2020-12-05T18:16:24.976446+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2020-12-05T18:16:24.982463+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
+2020-12-05T18:16:25.101860+00:00 app[web.1]: El puerto asignado es: 32498
+2020-12-05T18:16:25.127779+00:00 app[web.1]: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2020-12-05T18:16:25.127871+00:00 app[web.1]: SLF4J: Defaulting to no-operation (NOP) logger implementation
+2020-12-05T18:16:25.128048+00:00 app[web.1]: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2020-12-05T18:16:25.209323+00:00 app[web.1]: Iniciando servidor
+2020-12-05T18:16:25.452470+00:00 app[web.1]: Exception in thread "main" domain.excepciones.ExceptionFileNotFound: No se encontro el archivo
+2020-12-05T18:16:25.452665+00:00 app[web.1]: at security.Validaciones$2.realizarValidacion(Validaciones.java:38)
+2020-12-05T18:16:25.452725+00:00 app[web.1]: at domain.usuarios.Usuario.lambda$realizarValidaciones$0(Usuario.java:103)
+2020-12-05T18:16:25.452779+00:00 app[web.1]: at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+2020-12-05T18:16:25.452883+00:00 app[web.1]: at domain.usuarios.Usuario.realizarValidaciones(Usuario.java:103)
+2020-12-05T18:16:25.452960+00:00 app[web.1]: at domain.usuarios.Usuario.setContrasenia(Usuario.java:88)
+2020-12-05T18:16:25.453095+00:00 app[web.1]: at domain.usuarios.Usuario.<init>(Usuario.java:44)
+2020-12-05T18:16:25.453097+00:00 app[web.1]: at server.Bootstrap.init(Bootstrap.java:43)
+2020-12-05T18:16:25.453157+00:00 app[web.1]: at server.Bootstrap.main(Bootstrap.java:21)
+2020-12-05T18:16:25.453248+00:00 app[web.1]: at Main.main(Main.java:10)
+2020-12-05T18:16:26.862040+00:00 heroku[web.1]: State changed from starting to up
+2020-12-05T18:23:50.000000+00:00 app[api]: Build started by user dichena.federico@gmail.com
+2020-12-05T18:24:04.880627+00:00 app[api]: Release v33 created by user dichena.federico@gmail.com
+2020-12-05T18:24:04.880627+00:00 app[api]: Deploy 1.0-SNAPSHOT by user dichena.federico@gmail.com
+2020-12-05T18:24:05.034000+00:00 heroku[web.1]: Restarting
+2020-12-05T18:24:05.157414+00:00 heroku[web.1]: State changed from up to starting
+2020-12-05T18:24:06.607363+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-12-05T18:24:07.079843+00:00 heroku[web.1]: Process exited with status 143
+2020-12-05T18:24:09.000000+00:00 app[api]: Build succeeded
+2020-12-05T18:24:09.251337+00:00 heroku[web.1]: Starting process with command `java -jar ./target/GeSoc-1.0-SNAPSHOT-jar-with-dependencies.jar`
+2020-12-05T18:24:11.726904+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2020-12-05T18:24:11.730811+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
+2020-12-05T18:24:11.863939+00:00 app[web.1]: El puerto asignado es: 43214
+2020-12-05T18:24:11.899188+00:00 app[web.1]: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2020-12-05T18:24:11.899190+00:00 app[web.1]: SLF4J: Defaulting to no-operation (NOP) logger implementation
+2020-12-05T18:24:11.899274+00:00 app[web.1]: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2020-12-05T18:24:12.035285+00:00 app[web.1]: Iniciando servidor
+2020-12-05T18:24:12.382315+00:00 app[web.1]: Exception in thread "main" domain.excepciones.ExceptionFileNotFound: No se encontro el archivo
+2020-12-05T18:24:12.382722+00:00 app[web.1]: at security.Validaciones$2.realizarValidacion(Validaciones.java:38)
+2020-12-05T18:24:12.382965+00:00 app[web.1]: at domain.usuarios.Usuario.lambda$realizarValidaciones$0(Usuario.java:103)
+2020-12-05T18:24:12.383132+00:00 app[web.1]: at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+2020-12-05T18:24:12.383303+00:00 app[web.1]: at domain.usuarios.Usuario.realizarValidaciones(Usuario.java:103)
+2020-12-05T18:24:12.383439+00:00 app[web.1]: at domain.usuarios.Usuario.setContrasenia(Usuario.java:88)
+2020-12-05T18:24:12.383588+00:00 app[web.1]: at domain.usuarios.Usuario.<init>(Usuario.java:44)
+2020-12-05T18:24:12.383729+00:00 app[web.1]: at server.Bootstrap.init(Bootstrap.java:43)
+2020-12-05T18:24:12.383834+00:00 app[web.1]: at server.Bootstrap.main(Bootstrap.java:21)
+2020-12-05T18:24:12.383923+00:00 app[web.1]: at Main.main(Main.java:10)
+2020-12-05T18:24:13.266206+00:00 heroku[web.1]: State changed from starting to up
+2020-12-05T18:31:29.000000+00:00 app[api]: Build started by user dichena.federico@gmail.com
+2020-12-05T18:31:43.848953+00:00 heroku[web.1]: Restarting
+2020-12-05T18:31:43.851198+00:00 heroku[web.1]: State changed from up to starting
+2020-12-05T18:31:43.571871+00:00 app[api]: Deploy 1.0-SNAPSHOT by user dichena.federico@gmail.com
+2020-12-05T18:31:43.571871+00:00 app[api]: Release v34 created by user dichena.federico@gmail.com
+2020-12-05T18:31:44.948831+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2020-12-05T18:31:45.359712+00:00 heroku[web.1]: Process exited with status 143
+2020-12-05T18:31:47.546643+00:00 heroku[web.1]: Starting process with command `java -jar ./target/GeSoc-1.0-SNAPSHOT-jar-with-dependencies.jar`
+2020-12-05T18:31:48.000000+00:00 app[api]: Build succeeded
+2020-12-05T18:31:49.913512+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2020-12-05T18:31:49.918669+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8
+2020-12-05T18:31:50.018773+00:00 app[web.1]: El puerto asignado es: 43427
+2020-12-05T18:31:50.041109+00:00 app[web.1]: SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2020-12-05T18:31:50.041163+00:00 app[web.1]: SLF4J: Defaulting to no-operation (NOP) logger implementation
+2020-12-05T18:31:50.041172+00:00 app[web.1]: SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2020-12-05T18:31:50.121121+00:00 app[web.1]: Iniciando servidor
+2020-12-05T18:31:50.336772+00:00 app[web.1]: Exception in thread "main" domain.excepciones.ExceptionFileNotFound: No se encontro el archivo
+2020-12-05T18:31:50.337359+00:00 app[web.1]: at security.Validaciones$2.realizarValidacion(Validaciones.java:40)
+2020-12-05T18:31:50.337503+00:00 app[web.1]: at domain.usuarios.Usuario.lambda$realizarValidaciones$0(Usuario.java:103)
+2020-12-05T18:31:50.337635+00:00 app[web.1]: at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+2020-12-05T18:31:50.337771+00:00 app[web.1]: at domain.usuarios.Usuario.realizarValidaciones(Usuario.java:103)
+2020-12-05T18:31:50.337875+00:00 app[web.1]: at domain.usuarios.Usuario.setContrasenia(Usuario.java:88)
+2020-12-05T18:31:50.339974+00:00 app[web.1]: at domain.usuarios.Usuario.<init>(Usuario.java:44)
+2020-12-05T18:31:50.340045+00:00 app[web.1]: at server.Bootstrap.init(Bootstrap.java:43)
+2020-12-05T18:31:50.340126+00:00 app[web.1]: at server.Bootstrap.main(Bootstrap.java:21)
+2020-12-05T18:31:50.340192+00:00 app[web.1]: at Main.main(Main.java:10)
+2020-12-05T18:31:50.882431+00:00 heroku[web.1]: State changed from starting to up
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? 

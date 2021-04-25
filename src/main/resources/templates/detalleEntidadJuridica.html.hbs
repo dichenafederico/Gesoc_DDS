@@ -1,0 +1,38 @@
+{{#partial "contenido"}}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Informacion de la entidad</li>
+    </ol>
+
+    <ul>
+        {{#entidades}}
+            <li> Nombre: <i>{{nombreFicticio }}</i></li>
+            <li> Tipo: <i>{{tipo }}</i></li>
+            <li> Categoria: <i><a href="/categorias/{{categoriaEntidad.nombre }}"> {{categoriaEntidad.nombre }}</a></i>
+            </li>
+            <li> Monto limite: <i>{{montoLimite }}</i></li>
+            <li> Monto alcanzado: <i>{{montoAlcanzado }}</i></li>
+            <li> ¿Esta bloqueada para hacer mas egresos? <i>{{BloqueadaParaComprar}}</i></li>
+            <li> ¿Esta bloqueada para agregarse mas entidades base? <i>{{bloqueada}}</i></li>
+            <li> ENTIDADES BASE: <br></li>
+            {{#entidadesBase}}
+                <li> {{nombreFicticio }}</li>
+            {{/entidadesBase}}
+
+            <li> USUARIOS:</li>
+            {{#usuarios}}
+                <li> {{nombre }}</li>
+            {{/usuarios}}
+
+        {{/entidades}}
+
+    </ul>
+
+
+
+
+{{/partial}}
+{{>layout.html.hbs}}

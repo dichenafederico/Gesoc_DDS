@@ -1,0 +1,36 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Entidades de la organizacion</li>
+    </ol>
+
+    <ul>
+        {{#entidades}}
+            <li> Nombre: <i><a href="/entidades/{{nombreFicticio }}">{{nombreFicticio }}</a></i></li>
+        {{/entidades}}
+    </ul>
+
+    <form action="entidades/DeCategoria" method='get'>
+
+        <div>
+            <label>Ver solo las de la siguiente categoria</label>
+            <select class="form-control" name="nombre">
+                {{#categorias}}
+                    <option> {{nombre}} </option>
+                {{/categorias}}
+                <option>Sin Categoria</option>
+            </select>
+
+        </div>
+
+        <br><br>
+
+        <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="get" value="Filtrar"></input>
+        <br>
+    </form>
+
+{{/partial}}
+{{>layout.html.hbs}}
+

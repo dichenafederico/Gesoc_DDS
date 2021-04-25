@@ -1,0 +1,45 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Administrar categoria</li>
+    </ol>
+
+    <h2>Agregar o quitar comando a categoria</h2>
+
+    <form action='/categoriaEditada' method='get'>
+
+
+        <div>
+            <label>Elegir categoria</label>
+            <select class="form-control" name="categoria">
+                {{#categorias}}
+                    <option> {{nombre}} </option>
+                {{/categorias}}
+            </select>
+
+        </div>
+        <div>
+            <label>Elegir comando</label>
+            <select class="form-control" name="comando">
+                {{#descripciones}}
+                    <option> {{descripcion}} </option>
+                {{/descripciones}}
+            </select>
+        </div>
+        <div>
+            <label>Elegir accion</label>
+            <select class="form-control" name="accion">
+                <option>Agregar</option>
+                <option>Quitar</option>
+            </select>
+        </div>
+        <br><br>
+
+        <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="get" value="Agregar o quitar"/>
+        <br>
+    </form>
+
+{{/partial}}
+{{>layout.html.hbs}}

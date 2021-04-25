@@ -1,0 +1,55 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Alta de entidades</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Alta de entidad juridica</h1>
+
+
+            <form action='/entidadJuridica' method='post'>
+
+                <div>
+                    <label>Nombre</label>
+                    <input class="form-control" type="text" name="nombre" required="true"/>
+                </div>
+                <div>
+                    <label>Direccion postal (4 digitos)</label>
+                    <input class="form-control" type="number" min="0" max="9999" name="direccionPostal" required="true"/>
+                </div>
+                <div>
+                    <label>Cuit (sin puntos ni guiones)</label>
+                    <input class="form-control" type="number" max="99999999999" name="cuit" required="true"/>
+                </div>
+                <div>
+                    <label>Razon social</label>
+                    <input class="form-control" type="text" name="razonSocial" required="true"/>
+                </div>
+                <div>
+                    <label>Codigo de inscripcion en IGC</label>
+                    <input class="form-control" type="text" name="codigoDeInscripcionEnIGC" required="true"/>
+                </div>
+                <div>
+                    <label>Monto limite</label>
+                    <input class="form-control" type="number" min="0" name="limite" required="true"/>
+                </div>
+                <div>
+                    <label>Categoria juridica*</label>
+                    <select class="form-control" name="categoria">
+                        <option value={{id}}>Osc</option>
+                        <option value={{id}}>Empresa</option>
+                    </select>
+
+                </div>
+                <br><br>
+
+                <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="post" value="Crear"></input>
+                <br>
+            </form>
+
+        </div>
+{{/partial}}
+{{>layout.html.hbs}}

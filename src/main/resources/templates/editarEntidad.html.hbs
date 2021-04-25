@@ -1,0 +1,47 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Administrar entidad</li>
+    </ol>
+
+    <h2>Asociar entidad a categoria (reemplazando la anterior si tuviera)</h2>
+
+    <form action='/entidadEditada' method='post'>
+        <div>
+            <label>Elegir categoria</label>
+            <select class="form-control" name="categoria">
+                {{#categorias}}
+                    <option> {{nombre}} </option>
+                {{/categorias}}
+            </select>
+        </div>
+        <div>
+            <label>Elegir entidad</label>
+            <select class="form-control" name="entidad">
+                {{#entidades}}
+                    <option> {{nombreFicticio}} </option>
+                {{/entidades}}
+            </select>
+        </div>
+        <br><br>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="post" value="Asociar"></input>
+        <br>
+        <h2>Dejar sin categoria a entidad</h2>
+        <form action='/entidadEditada' method='get'>
+            <div>
+                <label>Elegir entidad</label>
+                <select class="form-control" name="entidad">
+                    {{#entidades}}
+                        <option> {{nombreFicticio}} </option>
+                    {{/entidades}}
+                </select>
+            </div>
+            <br><br>
+            <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="get" value="Desasociar"></input>
+            <br>
+        </form>
+
+{{/partial}}
+{{>layout.html.hbs}}

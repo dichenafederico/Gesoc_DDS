@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gesoc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{#block "titulo"}}{{/block}}</title>
+    {{#block "scripts"}}{{/block}}
+    <link href="/css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../main.css">
+</head>
+
+<body>
+<div id="wrapper" class="toggled">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="/">
+                    <img src="/home.png" alt="home" width=64px height=64px align="left"/>
+                </a>
+                <label class="tituloSitio">GeSoc</label>
+                &emsp;
+                <!-- <font color="#4E07FA" size=24px><b>Q</b></font>
+                <font color="#FA0721" size=24px><b>M</b></font>
+                <font color="#07FA23" size=24px><b>P</b></font> -->
+            </li>
+            <br>
+            <li>
+                <a href="/entidades">Entidades</a>
+            </li>
+            <li>
+                <a href="/entidadBase">Nueva Entidad Base</a>
+            </li>
+            <li>
+                <a href="/entidadJuridica">Nueva Entidad Juridica</a>
+            </li>
+            <li>
+                <a href="/administrarEntidad">Administrar Entidades</a>
+            </li>
+            <li>
+                <a href="/nuevaCategoria">Nueva Categoria</a>
+            </li>
+            <li>
+                <a href="/administrarCategoria">Administrar Categorias</a>
+            </li>
+            <li>
+                <a href="/egreso">Nuevo Egreso</a>
+            </li>
+            <li>
+                <a href="/bandejaMensajes">Bandeja de mensajes</a>
+            </li>
+            <li>
+                <div style="position:fixed; bottom:8px">
+                    {{#if usuarioLogeado}}
+                        <form action="/logout" method="post">
+                            <input type="submit" class="btn btn-danger" value="Cerrar sesión">
+                        </form>
+                    {{else}}
+                        <form action="/login" method="post">
+                            <input type="submit" class="btn btn-danger" value="Iniciar sesión">
+                        </form>
+                    {{/if}}
+                </div>
+            </li>
+
+            {{#block "items_sidebar"}}
+            {{/block}}
+
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container">
+            {{#block "contenido"}}
+            {{/block}}
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+{{#block "script"}}
+{{/block}}

@@ -1,0 +1,19 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Egresos de la organizacion</li>
+    </ol>
+
+    <ul>
+        {{#egresos}}
+            <li> Egreso Nro: <i>{{id }} -</i>
+                <i> Monto:</i> <i>{{montoTotal}}</i>
+                <i> - Proveedor:</i> <i>{{proveedor.nombre}}</i>
+            </li>
+        {{/egresos}}
+    </ul>
+{{/partial}}
+{{>layout.html.hbs}}
+

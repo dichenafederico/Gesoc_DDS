@@ -1,0 +1,36 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Alta de entidades</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-8">
+            <h1>Alta de entidad base</h1>
+
+            <form action='/entidadBase' method='post'>
+
+                <div>
+                    <label>Nombre</label>
+                    <input class="form-control" type="text" name="nombre" required="true"/>
+                </div>
+                <div>
+                    <label>Descripcion</label>
+                    <input class="form-control" type="text" name="descripcion" required="true"/>
+                </div>
+                <div>
+                    <label>Monto limite</label>
+                    <input class="form-control" type="number" min="0" name="limite" required="true"/>
+
+                </div>
+
+                <br><br>
+
+                <input type="submit" class="btn btn-lg btn-primary btn-block" formmethod="post" value="Crear"></input>
+                <br>
+            </form>
+        </div>
+
+{{/partial}}
+{{>layout.html.hbs}}

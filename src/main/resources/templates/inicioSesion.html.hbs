@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../main.css">
+</head>
+<body style="background-color:rgb(50,50,50);">
+<div style="width: 500px; margin-left: 500px; margin-top: 200px" class="col md-6">
+    <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+            {{#if feedback}}
+                <div style="color:red">
+                    {{ feedback }}
+                </div>
+            {{/if}}
+            <form action="/login" method="post">
+                <label>Nombre de Usuario</label><br>
+                <input class="form-control" name="usuario" type="text" placeholder="Ingrese usuario"><br>
+                <label>Contrasenia</label><br>
+                <input class="form-control" name="contrasenia" type="password" placeholder="Ingrese contrasenia"><br>
+                <input class="btn btn-lg btn-primary btn-block" type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

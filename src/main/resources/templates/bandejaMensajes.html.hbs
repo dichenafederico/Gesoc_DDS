@@ -1,0 +1,27 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Bandeja de mensajes</li>
+    </ol>
+
+    <div>
+        <ul>
+            {{#mensajes}}
+                <li> Error: <i>{{descripcion }} -</i>
+                    <i> Egreso numero:</i> <i>{{egresoError.id}}</i>
+                </li>
+            {{/mensajes}}
+        </ul>
+    </div>
+
+    <div>
+        {{#sinMensajes}}
+            <label> No hay mensajes en la bandeja</label>
+        {{/sinMensajes}}
+    </div>
+
+{{/partial}}
+{{>layout.html.hbs}}
+

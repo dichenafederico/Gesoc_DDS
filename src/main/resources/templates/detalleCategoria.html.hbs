@@ -1,0 +1,22 @@
+{{#partial "contenido"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/home">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Informacion de la categoria</li>
+    </ol>
+
+
+    <ul>
+        {{#categoria}}
+            <li> Nombre: <i>{{nombre }}</i></li>
+        {{/categoria}}
+        {{#comandos}}
+            <li> Comando: <i>{{descripcion }}</i></li>
+        {{/comandos}}
+    </ul>
+
+
+
+{{/partial}}
+{{>layout.html.hbs}}

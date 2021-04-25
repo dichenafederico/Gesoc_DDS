@@ -1,0 +1,32 @@
+.tituloSitio{
+    color:white;
+}
+
+.container{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.form-control{
+    margin-bottom: 20px;
+}
+
+.modal-contenido{
+    background-color:aqua;
+    width:300px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+}
+
+.grabacion {
+    position: absolute;
+    left: 25%;
+    right: 64%;
+    top: 40%;
+    background: gainsboro;
+    width: 479px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
